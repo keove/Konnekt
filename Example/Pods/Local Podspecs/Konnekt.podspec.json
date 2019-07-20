@@ -1,9 +1,9 @@
 {
   "name": "Konnekt",
-  "version": "0.1.0",
-  "summary": "A short description of Konnekt.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/cozdes/Konnekt",
+  "version": "1.0.1",
+  "summary": "Http request ez-mode",
+  "description": "Make http post,get request easily with a single in-line call-back. Allows making multi-part form request with form parameters and file upload too.",
+  "homepage": "https://github.com/keove/Konnekt",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "cozdes": "cagri.ozdes@keove.com"
   },
   "source": {
-    "git": "https://github.com/cozdes/Konnekt.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/keove/Konnekt.git",
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "8.0"
