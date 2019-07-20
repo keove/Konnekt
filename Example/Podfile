@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Konnekt_Example' do
+  pod 'Konnekt', :path => '../'
+
+  target 'Konnekt_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
