@@ -1,0 +1,16 @@
+PODS:
+  - Konnekt (0.1.0)
+
+DEPENDENCIES:
+  - Konnekt (from `../`)
+
+EXTERNAL SOURCES:
+  Konnekt:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Konnekt: ef00948ecec3292927aaf3fd1177ebcdd78c698a
+
+PODFILE CHECKSUM: 4a486c0bbe3b5a80f94520029c48cfd2853e5825
+
+COCOAPODS: 1.7.5

@@ -1,0 +1,6 @@
+framework module Konnekt {
+  umbrella header "Konnekt-umbrella.h"
+
+  export *
+  module * { export * }
+}
