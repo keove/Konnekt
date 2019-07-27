@@ -166,13 +166,13 @@ class Response: NSObject {
     }
     
     public static func lele<T:Codable>(response:String!,type:T.Type) -> T!  {
-        if let json = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
             let decoder : JSONDecoder = JSONDecoder();
             decoder.dataDecodingStrategy = .deferredToData;
             decoder.keyDecodingStrategy = .useDefaultKeys;
             
-            let dataDict = json?["data"] as! NSMutableDictionary;
+            let dataDict = json["data"] as! NSMutableDictionary;
             
             var dataData : Data;
             var dataJson : String!
