@@ -1,6 +1,6 @@
 {
   "name": "Konnekt",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "summary": "Http request ez-mode",
   "description": "Make http post,get request easily with a single in-line call-back. Allows making multi-part form request with form parameters and file upload too.",
   "homepage": "https://github.com/keove/Konnekt",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/keove/Konnekt.git",
-    "tag": "1.0.1"
+    "tag": "1.0.3"
   },
   "platforms": {
     "ios": "8.0"

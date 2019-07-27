@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class Response: NSObject {
+class Response: NSObject {
     
     public static func checkSuccess(response:String!) -> Bool {
         
-        if let json = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json : NSMutableDictionary = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
-            let msg:String! = json?["message"] as? String
-            let show:Bool! = json?["showMessage"] as? Bool
+            let msg:String! = json["message"] as? String
+            let show:Bool! = json["showMessage"] as? Bool
             
             
             if(show == true) {
@@ -24,7 +24,7 @@ public class Response: NSObject {
                 }
             }
             
-            let operationSuccess:Bool! = json?["operationSuccess"] as? Bool
+            let operationSuccess:Bool! = json["operationSuccess"] as? Bool
             if operationSuccess == true {
                 return true
             }
@@ -42,13 +42,13 @@ public class Response: NSObject {
      How to call this ; Response.genericFetch(response: result as? String, completion: { (u:User) in print(""); }) */
     public static func genericFetch<T: Codable>(response: String!, completion: @escaping (T) -> ()) {
         
-        if let json = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
             let decoder : JSONDecoder = JSONDecoder();
             decoder.dataDecodingStrategy = .deferredToData;
             decoder.keyDecodingStrategy = .useDefaultKeys;
             
-            let dataDict = json?["data"] as! NSMutableDictionary;
+            let dataDict = json["data"] as! NSMutableDictionary;
             
             var dataData : Data;
             var dataJson : String!
@@ -74,13 +74,13 @@ public class Response: NSObject {
             return nil
         }
         
-        if let json = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
             let decoder : JSONDecoder = JSONDecoder();
             decoder.dataDecodingStrategy = .deferredToData;
             decoder.keyDecodingStrategy = .useDefaultKeys;
             
-            let dataDict = json?["data"] as? NSMutableArray;
+            let dataDict = json["data"] as? NSMutableArray;
             
             var dataData : Data;
             var dataJson : String!
@@ -115,7 +115,7 @@ public class Response: NSObject {
             return nil
         }
         
-        if let json = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
             let decoder : JSONDecoder = JSONDecoder();
             let dateFormatter : DateFormatter = DateFormatter()
@@ -124,7 +124,7 @@ public class Response: NSObject {
             decoder.dataDecodingStrategy = .deferredToData;
             decoder.keyDecodingStrategy = .useDefaultKeys;
             
-            let dataDict = json?["data"] as? NSMutableDictionary;
+            let dataDict = json["data"] as? NSMutableDictionary;
             
             if dataDict == nil {
                 return nil
@@ -157,9 +157,9 @@ public class Response: NSObject {
             return nil
         }
         
-        if let json = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
-            let str = json?["data"] as! String;
+            let str = json["data"] as! String;
             return str
         }
         else { return nil;}

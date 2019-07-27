@@ -10,6 +10,7 @@ import UIKit
 import Konnekt
 
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class ViewController: UIViewController {
             l.text = result as? String
             self.view.addSubview(l)
             
+        }
+        
+        Konnekt.post(url: "https://assldkfslk.com", fortype: .string, params: Paramz.create().give(), header: Paramz.create().give()) { (result, konnekt) in
+            print(result)
         }
     }
 
