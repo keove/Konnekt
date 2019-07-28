@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Response: NSObject {
+public class Response: NSObject {
     
     public static func checkSuccess(response:String!) -> Bool {
         
