@@ -22,22 +22,22 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     }
     
     
-    var responseString : String! = "";
-    var responseData : Data!
+    public var responseString : String! = "";
+    public var responseData : Data!
     
-    var delegate : KonnektDelegate!
-    var responseType : KonnektResponseType! = KonnektResponseType.string;
-    var contract : String! = "";
-    var statusCode : Int = 0;
+    public var delegate : KonnektDelegate!
+    public var responseType : KonnektResponseType! = KonnektResponseType.string;
+    public var contract : String! = "";
+    public var statusCode : Int = 0;
     
-    var method : String = "GET";
-    var postParams : NSMutableDictionary!
-    var headerParams : NSMutableDictionary!
-    var getParams : NSMutableDictionary!
-    var postFile : PostFile! = nil
-    var session : URLSession!
+    public var method : String = "GET";
+    public var postParams : NSMutableDictionary!
+    public var headerParams : NSMutableDictionary!
+    public var getParams : NSMutableDictionary!
+    public var postFile : PostFile! = nil
+    public var session : URLSession!
     
-    var expectedContentLength = 0
+    public var expectedContentLength = 0
     
     
     public func post(url:String, completion : @escaping (_ result:Data) -> ()) {

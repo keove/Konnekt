@@ -10,8 +10,8 @@ import UIKit
 
 public class PostFile: NSObject {
     
-    var fileName : String! = ""
-    var fileKey : String! = ""
-    var fileData : Data! = nil
+    public var fileName : String! = ""
+    public var fileKey : String! = ""
+    public var fileData : Data! = nil
 
 }
