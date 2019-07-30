@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164CF62222F0447100CD5FE2 /* TestModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164CF62122F0447100CD5FE2 /* TestModal.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164CF62122F0447100CD5FE2 /* TestModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModal.swift; sourceTree = "<group>"; };
 		2BC56D7C4F3E0DE48978C005 /* Pods-Konnekt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Konnekt_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Konnekt_Tests/Pods-Konnekt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Konnekt_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konnekt_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				164CF62122F0447100CD5FE2 /* TestModal.swift */,
 			);
 			name = "Example for Konnekt";
 			path = Konnekt;
@@ -335,6 +338,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				164CF62222F0447100CD5FE2 /* TestModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

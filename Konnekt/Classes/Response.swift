@@ -10,6 +10,17 @@ import UIKit
 
 public class Response: NSObject {
     
+    
+    public static func operationSuccessKey() -> String {
+        return UserDefaults.standard.string(forKey: "konnekt_response_operation_success_key") ?? "operationSuccess"
+    }
+    
+    public static func setOperationSuccessKey(successKey:String) {
+        UserDefaults.standard.set(successKey, forKey: "konnekt_response_operation_success_key")
+    }
+    
+    
+    
     public static func checkSuccess(response:String!) -> Bool {
         
         if let json : NSMutableDictionary = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
@@ -24,7 +35,13 @@ public class Response: NSObject {
                 }
             }
             
-            let operationSuccess:Bool! = json["operationSuccess"] as? Bool
+            let successKey : String! = Response.operationSuccessKey()
+            var operationSuccess:Bool! = json[successKey] as? Bool
+            if operationSuccess == nil {
+                if json[successKey] as? String == "true" {
+                    operationSuccess = true
+                }
+            }
             if operationSuccess == true {
                 return true
             }
@@ -67,7 +84,8 @@ public class Response: NSObject {
     }
     
     
-    public static func array<T>(response:String!,type:T.Type) -> T! where T:Codable {
+    
+    public static func array<T>(dataKey:String!="data", response:String!,type:T.Type) -> T! where T:Codable {
         
         let success : Bool! = checkSuccess(response: response)
         if success != true {
@@ -80,7 +98,7 @@ public class Response: NSObject {
             decoder.dataDecodingStrategy = .deferredToData;
             decoder.keyDecodingStrategy = .useDefaultKeys;
             
-            let dataDict = json["data"] as? NSMutableArray;
+            let dataDict = json[dataKey] as? NSMutableArray;
             
             var dataData : Data;
             var dataJson : String!
@@ -165,33 +183,7 @@ public class Response: NSObject {
         else { return nil;}
     }
     
-    public static func lele<T:Codable>(response:String!,type:T.Type) -> T!  {
-        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
-            
-            let decoder : JSONDecoder = JSONDecoder();
-            decoder.dataDecodingStrategy = .deferredToData;
-            decoder.keyDecodingStrategy = .useDefaultKeys;
-            
-            let dataDict = json["data"] as! NSMutableDictionary;
-            
-            var dataData : Data;
-            var dataJson : String!
-            do {
-                try dataData = JSONSerialization.data(withJSONObject: dataDict, options: .prettyPrinted);
-                dataJson = String(data: dataData, encoding: .utf8);
-            } catch {}
-            
-            
-            do {
-                let model = try JSONDecoder().decode(T.self, from: dataJson.data(using: .utf8)!)
-                return model;
-            } catch let jsonErr {
-                print("failed to decode, \(jsonErr)")
-                return nil;
-            }
-        }
-        else { return nil;}
-    }
+   
     
 
     

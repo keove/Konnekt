@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
+        /*
         Konnekt.post(url: "https://postman-echo.com/post", fortype: .string, params: Paramz.create().add(name: "projectId", val: 21).give(), header: Paramz.create().add(name: "test", val: "test").give()) { result,konnekt in
             print(result)
             
@@ -25,11 +27,25 @@ class ViewController: UIViewController {
             l.text = result as? String
             self.view.addSubview(l)
             
+        }*/
+        
+        
+        Response.setOperationSuccessKey(successKey: "success")  
+        
+        Konnekt.post(url: "http://radyoapp.criturk.com/appservice.aspx", fortype: .string, params: Paramz.create().add(name: "cmd", val: "get_podcasts").give(), header: Paramz.create().give()) { (result, konnekt) in
+            
+            
+            var objs : Array<TestModal>! = Response.array(dataKey: "podcasts", response: result as? String, type: [TestModal].self)
+            
+            for obj in objs! {
+                print(obj.name)
+            }
         }
         
+        /*
         Konnekt.post(url: "https://assldkfslk.com", fortype: .string, params: Paramz.create().give(), header: Paramz.create().give()) { (result, konnekt) in
             print(result)
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
