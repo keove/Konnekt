@@ -309,11 +309,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
         self.getParams = params;
         self.responseType = fortype;
         self.contract = contract;
-        //get(url: url, contract: contract, fortype: fortype,params: params);
-        /*get(url:url,contract: contract,fortype: fortype,params: params,completion: {
-            result in
-            completion(result);
-        })*/
+        
         get(url: url) { result in
             
             if(fortype == .string) {

@@ -11,6 +11,14 @@ import UIKit
 public class Response: NSObject {
     
     
+    public static func dialogOkayString() -> String {
+        UserDefaults.standard.string(forKey: "konnekt_response_dialog_okay_key") ?? "Tamam"
+    }
+    
+    public static func setDialogOkayString(string:String) {
+        UserDefaults.standard.set(string, forKey: "konnekt_response_dialog_okay_key")
+    }
+    
     public static func operationSuccessKey() -> String {
         return UserDefaults.standard.string(forKey: "konnekt_response_operation_success_key") ?? "operationSuccess"
     }
@@ -192,7 +200,7 @@ public class Response: NSObject {
 
     
     
-    public static func dialog(title: String!, message: String!, inViewController: UIViewController!, okayText: String = "Okay") {
+    public static func dialog(title: String!, message: String!, inViewController: UIViewController!, okayText: String = dialogOkayString()) {
         
         DispatchQueue.main.async {
             let dialogAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
