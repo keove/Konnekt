@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Konnekt'
-  s.version          = '1.0.13'
+  s.version          = '1.0.14'
   s.summary          = 'Http request ez-mode'
 
 # This description is used to generate tags and improve search results.

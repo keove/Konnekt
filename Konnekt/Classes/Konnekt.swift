@@ -162,9 +162,11 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
         
         var json : NSMutableDictionary? = nil
         do {
-            json = try JSONSerialization.jsonObject(with: responseData, options: .mutableLeaves) as? NSMutableDictionary
+            json = try JSONSerialization.jsonObject(with: responseData!, options: .mutableContainers) as? NSMutableDictionary
         }
-        catch {}
+        catch let error {
+            print(error)
+        }
         
         
         
