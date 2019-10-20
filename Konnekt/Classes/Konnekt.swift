@@ -121,8 +121,12 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
         let task = session.dataTask(with: request) {
             (data,response,error) in
             
+            let r :  HTTPURLResponse? = response as? HTTPURLResponse
+            print("konnekt : status code\(r?.statusCode ?? -1)")
+            
             if let error = error {
                 print("konnekt error \(error)");
+                completion("".data(using: .utf8)!)
             }
             else {
                 if let response = response as? HTTPURLResponse {
