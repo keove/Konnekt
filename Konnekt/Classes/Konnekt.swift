@@ -16,6 +16,9 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     public static var CUSTOM_EVENT_TRIGGER_STRING : String! = ""
     public static var CUSTOM_EVENT_NAME : String! = ""
     
+    public static var REQUEST_TIMEOUT : TimeInterval = 30.0
+    public static var RESOURCE_TIMEOUT : TimeInterval = 30.0
+    
     
     public enum KonnektResponseType {
         case string,json,data,object,arrayobject
@@ -108,8 +111,12 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
             request.httpBody = paramsString.data(using: .utf8);
         }
         
-        
-        session = URLSession(configuration: .default, delegate: self, delegateQueue: .main)
+    
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = Konnekt.REQUEST_TIMEOUT
+        sessionConfig.timeoutIntervalForResource = Konnekt.RESOURCE_TIMEOUT
+        session = URLSession(configuration: sessionConfig, delegate: self, delegateQueue: .main)
+    
         
         let task = session.dataTask(with: request) {
             (data,response,error) in
