@@ -39,6 +39,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     public var getParams : NSMutableDictionary!
     public var postFile : PostFile! = nil
     public var session : URLSession!
+    public var error : Error?
     
     public var expectedContentLength = 0
     
@@ -122,10 +123,12 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
             (data,response,error) in
             
             let r :  HTTPURLResponse? = response as? HTTPURLResponse
-            print("konnekt : status code\(r?.statusCode ?? -1)")
+            print("konnekt : status code\(r?.statusCode ?? 0)")
             
             if let error = error {
                 print("konnekt error \(error)");
+                self.error = error
+                self.statusCode = r?.statusCode ?? 0
                 completion("".data(using: .utf8)!)
             }
             else {
@@ -144,6 +147,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
                     
                 }
                 else {
+                    self.statusCode = -1
                     print("konnekt - no data");
                 }
             }
@@ -152,6 +156,27 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
         
         
     }
+    
+    
+    public func validateJsonResponse() -> Bool {
+        
+        var json : NSMutableDictionary? = nil
+        do {
+            json = try JSONSerialization.jsonObject(with: responseData, options: .mutableLeaves) as? NSMutableDictionary
+        }
+        catch {}
+        
+        
+        
+        if statusCode > 0 && json != nil {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    
     
     public func urlSession(_ session: URLSession, task: URLSessionTask, didSendBodyData bytesSent: Int64, totalBytesSent: Int64, totalBytesExpectedToSend: Int64) {
         
