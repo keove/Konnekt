@@ -122,14 +122,14 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
         let task = session.dataTask(with: request) {
             (data,response,error) in
             
-            let r :  HTTPURLResponse? = response as? HTTPURLResponse
-            print("konnekt : status code\(r?.statusCode ?? 0)")
+
             
             if let error = error {
                 print("konnekt error \(error)");
                 self.error = error
-                self.statusCode = r?.statusCode ?? 0
-                completion("".data(using: .utf8)!)
+                self.statusCode = 0
+                self.responseData = "".data(using: .utf8)!
+                completion(self.responseData)
             }
             else {
                 if let response = response as? HTTPURLResponse {
@@ -140,15 +140,15 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
                     self.responseString = String(data:data,encoding: .utf8);
                     
                     if self.responseString.contains(Konnekt.CUSTOM_EVENT_TRIGGER_STRING) {
-                        //GlobalEventHub.fireEvent(eventName: Konnekt.CUSTOM_EVENT_NAME, object: nil, flag: false, code: 0)
                     }
-                    //print("konnekt response \(self.responseString)");
                     completion(self.responseData);
                     
                 }
                 else {
+                    self.responseData = "".data(using: .utf8)!
                     self.statusCode = -1
                     print("konnekt - no data");
+                    completion(self.responseData)
                 }
             }
         }
@@ -261,7 +261,8 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     
     
     public static func post(postFile:PostFile! = nil,delegate:KonnektDelegate! = nil, url:String,fortype:KonnektResponseType,params:NSMutableDictionary,header:NSMutableDictionary, completion : @escaping (_ result:Any, _ konnekt:Konnekt)
-        -> ()) {
+        -> ()
+    ) {
         
         let konnekt : Konnekt = Konnekt();
         konnekt.headerParams = header;
