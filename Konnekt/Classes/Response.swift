@@ -23,10 +23,14 @@ public class Response: NSObject {
     
     public static func checkSuccess(response:String!) -> Bool {
         
-        if let json : NSMutableDictionary = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+        if let json : NSMutableDictionary? = try? JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
             
-            let msg:String! = json["message"] as? String
-            let show:Bool! = json["showMessage"] as? Bool
+            if json == nil {
+                return false
+            }
+            
+            let msg:String? = json?["message"] as? String
+            let show:Bool? = json?["showMessage"] as? Bool
             
             
             if(show == true) {
@@ -35,13 +39,13 @@ public class Response: NSObject {
                 }
             }
             
-            let successKey : String! = Response.operationSuccessKey()
-            var operationSuccess:Bool! = json[successKey] as? Bool
-            if operationSuccess == nil {
-                if json[successKey] as? String == "true" {
-                    operationSuccess = true
-                }
+            let successKey : String = Response.operationSuccessKey()
+            var operationSuccess:Bool = (json?[successKey] as? Bool) ?? false
+            
+            if json?[successKey] as? String == "true" {
+                operationSuccess = true
             }
+            
             if operationSuccess == true {
                 return true
             }
