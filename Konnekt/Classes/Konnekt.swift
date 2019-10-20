@@ -207,6 +207,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
             
             if let error = error {
                 print("konnekt error \(error)");
+                completion("".data(using: .utf8)!)
             }
             else {
                 if let response = response as? HTTPURLResponse {
