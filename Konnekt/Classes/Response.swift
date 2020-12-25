@@ -195,6 +195,20 @@ public class Response: NSObject {
         else { return nil;}
     }
     
+    public static func int(response:String!) -> Int {
+        let success : Bool! = checkSuccess(response: response)
+        if success != true {
+            return 0
+        }
+        
+        if let json = try! JSONSerialization.jsonObject(with: response.data(using: .utf8)!, options: .mutableContainers) as? NSMutableDictionary {
+            
+            let val = json["data"] as! Int;
+            return val
+        }
+        else { return 0}
+    }
+    
    
     
 

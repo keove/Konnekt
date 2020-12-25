@@ -125,6 +125,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
 
             
             if let error = error {
+                
                 print("konnekt error \(error)");
                 self.error = error
                 self.statusCode = 0

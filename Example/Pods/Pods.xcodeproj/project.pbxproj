@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A27B03547BD9E113F9E4DA88E9A8155 /* PostFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB37BB8EBC7D22B5A71BB1D3149B6D7E /* PostFile.swift */; };
+		0A27B03547BD9E113F9E4DA88E9A8155 /* PostFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7D37C517DE8BD3D161A19AD7A09B70 /* PostFile.swift */; };
 		238033061976730B3C2BA250A42A4759 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		469D90D867E31DD427ADD6370908091E /* Konnekt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6D025719502C2742AC23D0F1D46A8A /* Konnekt-dummy.m */; };
-		4E67B281EBF63ADC471B3CDF306DC738 /* Konnekt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA883DA46FA1712777BA8F7E37E38C9 /* Konnekt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		469D90D867E31DD427ADD6370908091E /* Konnekt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C0B439C046AE2BDB13A49C69030B6C /* Konnekt-dummy.m */; };
+		4E67B281EBF63ADC471B3CDF306DC738 /* Konnekt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B461296A38F55308160B8FD5141E1231 /* Konnekt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55DE5C53DE06603D303FA63AA68ED86D /* Pods-Konnekt_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C04C1AB6E4A391FC7EAD7B5AB6C7FD /* Pods-Konnekt_Example-dummy.m */; };
 		771C68580F4780CCE624428922D4F796 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		82BD90C6188A80D61D5F007F7203F7A9 /* KonnektDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278474D80F5C06AD963FA598F968189D /* KonnektDelegate.swift */; };
+		82BD90C6188A80D61D5F007F7203F7A9 /* KonnektDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA723C7A266B031B8C8E8BB456853443 /* KonnektDelegate.swift */; };
 		8C1724BEA4AC47A46C388DCD0B2B9E4A /* Pods-Konnekt_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FC910989E5BCAF09EC7AC79E2937F2 /* Pods-Konnekt_Tests-dummy.m */; };
-		8C1904CD353DAA8FC7F36925316F1C2D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80845416709A894D849D77E772DC1AE3 /* Response.swift */; };
+		8C1904CD353DAA8FC7F36925316F1C2D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ADF4B0BA685E2DC2B7C6FF0D0B3ADA /* Response.swift */; };
 		9535CAE7B32D113AA8A09F4B38D4D22D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		AD05F53EB4A0CF3C6C3C5EAE9B32800F /* Pods-Konnekt_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A54557E55D62E87BB5224B6433C4B417 /* Pods-Konnekt_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7C21734ECAA1C252551E2E154E2DFF5 /* Pods-Konnekt_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F11545563F9B20C0449441A9D88D22 /* Pods-Konnekt_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E9EFA62CFC92CAEC8C12A145D63F5F80 /* Paramz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE30CFC2CB8E2558BC7E69FF4BCBD58 /* Paramz.swift */; };
-		FCD991875257612BDF30334A8A04EE10 /* Konnekt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A622781393F13519E047E461E121FB /* Konnekt.swift */; };
+		E9EFA62CFC92CAEC8C12A145D63F5F80 /* Paramz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CDBEEE22752B1639D01EE6D8B8F9E0 /* Paramz.swift */; };
+		FCD991875257612BDF30334A8A04EE10 /* Konnekt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC005E99AF59E3CC2BBA9F9AAD398258 /* Konnekt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,32 +41,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060D03F65B8EEF37636AC2BBDE871769 /* Konnekt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Konnekt-prefix.pch"; sourceTree = "<group>"; };
 		0743974C2A9DFA9C4C0995B542A6C62D /* Pods-Konnekt_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Konnekt_Tests-Info.plist"; sourceTree = "<group>"; };
-		0788AC1923DD34A76A356D04B6A3BCCA /* Konnekt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Konnekt-prefix.pch"; sourceTree = "<group>"; };
 		0EE01B3FA7558F10DAEEE4DCCE969435 /* Pods-Konnekt_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Konnekt_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		10C204DDD3C2384ACBABFE638A92420E /* Pods_Konnekt_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Konnekt_Tests.framework; path = "Pods-Konnekt_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1628FC90E307D80A4C79F41C21139A48 /* Konnekt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Konnekt.xcconfig; sourceTree = "<group>"; };
 		17FC910989E5BCAF09EC7AC79E2937F2 /* Pods-Konnekt_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Konnekt_Tests-dummy.m"; sourceTree = "<group>"; };
-		278474D80F5C06AD963FA598F968189D /* KonnektDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KonnektDelegate.swift; path = Konnekt/Classes/KonnektDelegate.swift; sourceTree = "<group>"; };
 		2BA7842E5FBA6BAFDECA6252A98232BB /* Pods-Konnekt_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Konnekt_Tests.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		34C78DE0C00A3E43F8D982150646F0EC /* Pods-Konnekt_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Konnekt_Example-frameworks.sh"; sourceTree = "<group>"; };
 		387B861C4B3BC4AD844BDE111CEFC088 /* Pods-Konnekt_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Konnekt_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		38E27F9EF27294CAF6FA304244E8466E /* Konnekt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Konnekt.modulemap; sourceTree = "<group>"; };
+		39ADF4B0BA685E2DC2B7C6FF0D0B3ADA /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Konnekt/Classes/Response.swift; sourceTree = "<group>"; };
+		4A7D37C517DE8BD3D161A19AD7A09B70 /* PostFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostFile.swift; path = Konnekt/Classes/PostFile.swift; sourceTree = "<group>"; };
 		53C04C1AB6E4A391FC7EAD7B5AB6C7FD /* Pods-Konnekt_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Konnekt_Example-dummy.m"; sourceTree = "<group>"; };
-		5A6D025719502C2742AC23D0F1D46A8A /* Konnekt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Konnekt-dummy.m"; sourceTree = "<group>"; };
-		5BA883DA46FA1712777BA8F7E37E38C9 /* Konnekt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Konnekt-umbrella.h"; sourceTree = "<group>"; };
 		6414B955A3B1AA2BF1FF237BBCE57695 /* Pods-Konnekt_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Konnekt_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		64EFB4CDEA01BE8C5DC7C5DD0AFDAC94 /* Konnekt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Konnekt.framework; path = Konnekt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		712EC67DD2C912DAFF29FC2F64790BD7 /* Konnekt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Konnekt.modulemap; sourceTree = "<group>"; };
-		7AE30CFC2CB8E2558BC7E69FF4BCBD58 /* Paramz.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Paramz.swift; path = Konnekt/Classes/Paramz.swift; sourceTree = "<group>"; };
-		80845416709A894D849D77E772DC1AE3 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Konnekt/Classes/Response.swift; sourceTree = "<group>"; };
+		6FA404F4B9B0C8B1292ABD38DFE9C731 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		81C6181047C92163A9F064E163657EB7 /* Konnekt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Konnekt.release.xcconfig; sourceTree = "<group>"; };
+		83AAA680DB0BAD29FC631630FFBF5A51 /* Konnekt.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Konnekt.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93CDBEEE22752B1639D01EE6D8B8F9E0 /* Paramz.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Paramz.swift; path = Konnekt/Classes/Paramz.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A222CC4BB226F8366E1B7BFDBDC4BAE4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		A54557E55D62E87BB5224B6433C4B417 /* Pods-Konnekt_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Konnekt_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A5EFB481B5301D50233D7779E598B729 /* Konnekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Konnekt.debug.xcconfig; sourceTree = "<group>"; };
+		AA1C8C21754DFB51DE33434F1629D052 /* Konnekt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Konnekt-Info.plist"; sourceTree = "<group>"; };
+		AA723C7A266B031B8C8E8BB456853443 /* KonnektDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KonnektDelegate.swift; path = Konnekt/Classes/KonnektDelegate.swift; sourceTree = "<group>"; };
 		AD4589C9A877F2B3B7222013A284F0BA /* Pods-Konnekt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Konnekt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF285171FC9C02D3213E5A23C9A0271A /* Pods-Konnekt_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Konnekt_Example-Info.plist"; sourceTree = "<group>"; };
-		BB37BB8EBC7D22B5A71BB1D3149B6D7E /* PostFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostFile.swift; path = Konnekt/Classes/PostFile.swift; sourceTree = "<group>"; };
-		BB6D84FECA517BF2029D6080F3DAB30A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		B461296A38F55308160B8FD5141E1231 /* Konnekt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Konnekt-umbrella.h"; sourceTree = "<group>"; };
+		BD177A687248F0B1BA7E17BAAF6FAD27 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		BF432FA6D856E4D5DEBA4B803AA0F8FD /* Pods-Konnekt_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Konnekt_Example.modulemap"; sourceTree = "<group>"; };
 		CAD181B71C8B464896159F9B535AE413 /* Pods-Konnekt_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Konnekt_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CBD1CDD4C274116F88A51A889848F4BF /* Pods_Konnekt_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Konnekt_Example.framework; path = "Pods-Konnekt_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,9 +76,8 @@
 		CEA6E96139F3BC4023607F81E4DB11CB /* Pods-Konnekt_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Konnekt_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D0F11545563F9B20C0449441A9D88D22 /* Pods-Konnekt_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Konnekt_Example-umbrella.h"; sourceTree = "<group>"; };
 		D50D2E910D9E85A314105200D65B082F /* Pods-Konnekt_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Konnekt_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EEBF0B0C62EC75F94C8243DD6C66F7E8 /* Konnekt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Konnekt-Info.plist"; sourceTree = "<group>"; };
-		F2A622781393F13519E047E461E121FB /* Konnekt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Konnekt.swift; path = Konnekt/Classes/Konnekt.swift; sourceTree = "<group>"; };
-		FAB0E0293A9EA5F24BBFE704D0F3CBEE /* Konnekt.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Konnekt.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F9C0B439C046AE2BDB13A49C69030B6C /* Konnekt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Konnekt-dummy.m"; sourceTree = "<group>"; };
+		FC005E99AF59E3CC2BBA9F9AAD398258 /* Konnekt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Konnekt.swift; path = Konnekt/Classes/Konnekt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,37 +108,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DBCC5D6679A07C41F0076099C57EA93 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				38E27F9EF27294CAF6FA304244E8466E /* Konnekt.modulemap */,
+				F9C0B439C046AE2BDB13A49C69030B6C /* Konnekt-dummy.m */,
+				AA1C8C21754DFB51DE33434F1629D052 /* Konnekt-Info.plist */,
+				060D03F65B8EEF37636AC2BBDE871769 /* Konnekt-prefix.pch */,
+				B461296A38F55308160B8FD5141E1231 /* Konnekt-umbrella.h */,
+				A5EFB481B5301D50233D7779E598B729 /* Konnekt.debug.xcconfig */,
+				81C6181047C92163A9F064E163657EB7 /* Konnekt.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Konnekt";
+			sourceTree = "<group>";
+		};
 		29D687A996F3EA6DF71B217D21E7E1DC /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3634E9719602E7D23DD0E4AF2BC3EE25 /* Konnekt */,
+				C892D7EABD768A67816087FC307955B4 /* Konnekt */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		3634E9719602E7D23DD0E4AF2BC3EE25 /* Konnekt */ = {
-			isa = PBXGroup;
-			children = (
-				F2A622781393F13519E047E461E121FB /* Konnekt.swift */,
-				278474D80F5C06AD963FA598F968189D /* KonnektDelegate.swift */,
-				7AE30CFC2CB8E2558BC7E69FF4BCBD58 /* Paramz.swift */,
-				BB37BB8EBC7D22B5A71BB1D3149B6D7E /* PostFile.swift */,
-				80845416709A894D849D77E772DC1AE3 /* Response.swift */,
-				37E1122911220C52EBBB900BB4E72988 /* Pod */,
-				CCFABE695BE60E052136AB78B1FCD51B /* Support Files */,
-			);
-			name = Konnekt;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		37E1122911220C52EBBB900BB4E72988 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				FAB0E0293A9EA5F24BBFE704D0F3CBEE /* Konnekt.podspec */,
-				BB6D84FECA517BF2029D6080F3DAB30A /* LICENSE */,
-				A222CC4BB226F8366E1B7BFDBDC4BAE4 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		51B8BBE83C3FBBEAE3A5F35590429C46 /* Products */ = {
@@ -157,6 +148,16 @@
 				AC9A0479281317D029C9EC106C93199E /* Pods-Konnekt_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8B3F03162C2865808132511FC92BAE29 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				83AAA680DB0BAD29FC631630FFBF5A51 /* Konnekt.podspec */,
+				BD177A687248F0B1BA7E17BAAF6FAD27 /* LICENSE */,
+				6FA404F4B9B0C8B1292ABD38DFE9C731 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		AC9A0479281317D029C9EC106C93199E /* Pods-Konnekt_Tests */ = {
@@ -200,18 +201,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CCFABE695BE60E052136AB78B1FCD51B /* Support Files */ = {
+		C892D7EABD768A67816087FC307955B4 /* Konnekt */ = {
 			isa = PBXGroup;
 			children = (
-				712EC67DD2C912DAFF29FC2F64790BD7 /* Konnekt.modulemap */,
-				1628FC90E307D80A4C79F41C21139A48 /* Konnekt.xcconfig */,
-				5A6D025719502C2742AC23D0F1D46A8A /* Konnekt-dummy.m */,
-				EEBF0B0C62EC75F94C8243DD6C66F7E8 /* Konnekt-Info.plist */,
-				0788AC1923DD34A76A356D04B6A3BCCA /* Konnekt-prefix.pch */,
-				5BA883DA46FA1712777BA8F7E37E38C9 /* Konnekt-umbrella.h */,
+				FC005E99AF59E3CC2BBA9F9AAD398258 /* Konnekt.swift */,
+				AA723C7A266B031B8C8E8BB456853443 /* KonnektDelegate.swift */,
+				93CDBEEE22752B1639D01EE6D8B8F9E0 /* Paramz.swift */,
+				4A7D37C517DE8BD3D161A19AD7A09B70 /* PostFile.swift */,
+				39ADF4B0BA685E2DC2B7C6FF0D0B3ADA /* Response.swift */,
+				8B3F03162C2865808132511FC92BAE29 /* Pod */,
+				0DBCC5D6679A07C41F0076099C57EA93 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Konnekt";
+			name = Konnekt;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -334,6 +336,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 51B8BBE83C3FBBEAE3A5F35590429C46 /* Products */;
@@ -419,37 +422,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		16F82B8AB2584E5A7217DFD4714BAFC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1628FC90E307D80A4C79F41C21139A48 /* Konnekt.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Konnekt/Konnekt-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Konnekt/Konnekt-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Konnekt/Konnekt.modulemap";
-				PRODUCT_MODULE_NAME = Konnekt;
-				PRODUCT_NAME = Konnekt;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		174BABC6EF1675B564007A345EBC6EFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6414B955A3B1AA2BF1FF237BBCE57695 /* Pods-Konnekt_Tests.release.xcconfig */;
@@ -550,6 +522,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		712EBBAAE1A8639E8E9C47E5C8154097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81C6181047C92163A9F064E163657EB7 /* Konnekt.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Konnekt/Konnekt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Konnekt/Konnekt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Konnekt/Konnekt.modulemap";
+				PRODUCT_MODULE_NAME = Konnekt;
+				PRODUCT_NAME = Konnekt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9367E29FBD72A2567C4DC1090DF579D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -708,9 +712,9 @@
 			};
 			name = Debug;
 		};
-		C8BF920E7CB8517E11EC3E8FF233B4EA /* Release */ = {
+		D4F71B888F8EBD8E5535C5EF797B13B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1628FC90E307D80A4C79F41C21139A48 /* Konnekt.xcconfig */;
+			baseConfigurationReference = A5EFB481B5301D50233D7779E598B729 /* Konnekt.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -734,11 +738,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -764,8 +767,8 @@
 		4C160CB9A444890639CFD4AF1B8A2E84 /* Build configuration list for PBXNativeTarget "Konnekt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16F82B8AB2584E5A7217DFD4714BAFC0 /* Debug */,
-				C8BF920E7CB8517E11EC3E8FF233B4EA /* Release */,
+				D4F71B888F8EBD8E5535C5EF797B13B8 /* Debug */,
+				712EBBAAE1A8639E8E9C47E5C8154097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
