@@ -20,9 +20,9 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     public static var RESOURCE_TIMEOUT : TimeInterval = 30.0
     
     
-    static open var host : String? = ""
-    static open var cert : String? = ""
-    static open var bundle : Bundle? = nil
+    public static var host : String? = ""
+    public static var cert : String? = ""
+    public static var bundle : Bundle? = nil
     
     public enum KonnektResponseType {
         case string,json,data,object,arrayobject
