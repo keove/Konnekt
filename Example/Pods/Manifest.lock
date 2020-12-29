@@ -1,5 +1,5 @@
 PODS:
-  - Konnekt (1.1.0)
+  - Konnekt (1.1.1)
 
 DEPENDENCIES:
   - Konnekt (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Konnekt: c7d330aacbfd550d28da9ecd5a281675ed7c9c7d
+  Konnekt: 78c0ba565455242bf58acf9547eec6aad929151b
 
 PODFILE CHECKSUM: 4a486c0bbe3b5a80f94520029c48cfd2853e5825
 
