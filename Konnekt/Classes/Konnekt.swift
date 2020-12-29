@@ -20,6 +20,10 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     public static var RESOURCE_TIMEOUT : TimeInterval = 30.0
     
     
+    static open var host : String? = ""
+    static open var cert : String? = ""
+    static open var bundle : Bundle? = nil
+    
     public enum KonnektResponseType {
         case string,json,data,object,arrayobject
     }
@@ -56,13 +60,13 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
                 let h : String = key as! String;
                 
                 /*
-                if let i = value as? Int {
-                    
-                }
-                else {
-                    let v : String = value as! String;
-                    let h : String = key as! String;
-                }*/
+                 if let i = value as? Int {
+                 
+                 }
+                 else {
+                 let v : String = value as! String;
+                 let h : String = key as! String;
+                 }*/
                 
                 
                 request.addValue(v, forHTTPHeaderField: h);
@@ -99,7 +103,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
             body.append(("\r\n--"+boundary+"\r\n").data(using: .utf8)!)
             request.httpBody = body as Data
             request.setValue(String(format: "%lu", body.length), forHTTPHeaderField: "Content-Lenght")
-
+            
             
         }
         else if(postParams != nil) {
@@ -112,17 +116,17 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
             request.httpBody = paramsString.data(using: .utf8);
         }
         
-    
+        
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = Konnekt.REQUEST_TIMEOUT
         sessionConfig.timeoutIntervalForResource = Konnekt.RESOURCE_TIMEOUT
         session = URLSession(configuration: sessionConfig, delegate: self, delegateQueue: .main)
-    
+        
         
         let task = session.dataTask(with: request) {
             (data,response,error) in
             
-
+            
             
             if let error = error {
                 
@@ -158,6 +162,51 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
         
     }
     
+    
+    
+    
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        
+        
+        //completionHandler(.performDefaultHandling,nil)
+        
+        
+        if !challenge.protectionSpace.host.contains(Konnekt.host ?? "nohost") {
+            completionHandler(.performDefaultHandling,nil)
+            return
+        }
+        
+        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
+            if let serverTrust = challenge.protectionSpace.serverTrust {
+                var secresult = SecTrustResultType.invalid
+                let status = SecTrustEvaluate(serverTrust, &secresult)
+                
+                if (errSecSuccess == status) {
+                    if let serverCertificate = SecTrustGetCertificateAtIndex(serverTrust, 0) {
+                        let serverCertificateData = SecCertificateCopyData(serverCertificate)
+                        let data = CFDataGetBytePtr(serverCertificateData);
+                        let size = CFDataGetLength(serverCertificateData);
+                        let cert1 = NSData(bytes: data, length: size)
+                        let file_der = Konnekt.bundle?.path(forResource: Konnekt.cert, ofType: "cer")
+                        
+                        if let file = file_der {
+                            if let cert2 = NSData(contentsOfFile: file) {
+                                if cert1.isEqual(to: cert2 as Data) {
+                                    completionHandler(URLSession.AuthChallengeDisposition.useCredential, URLCredential(trust:serverTrust))
+                                    return
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Pinning failed
+        completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil)
+        
+    }
     
     public func validateJsonResponse() -> Bool {
         
@@ -264,7 +313,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     
     
     public static func post(postFile:PostFile! = nil,delegate:KonnektDelegate! = nil, url:String,fortype:KonnektResponseType,params:NSMutableDictionary,header:NSMutableDictionary, completion : @escaping (_ result:Any, _ konnekt:Konnekt)
-        -> ()
+                                -> ()
     ) {
         
         let konnekt : Konnekt = Konnekt();
@@ -307,7 +356,7 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     
     
     public func post(url:String,fortype:KonnektResponseType,params:NSMutableDictionary,header:NSMutableDictionary, completion : @escaping (_ result:Any, _ konnekt:Konnekt)
-        -> ()) {
+                        -> ()) {
         
         self.headerParams = header;
         self.postParams = params;
@@ -373,5 +422,5 @@ public class Konnekt: NSObject,URLSessionTaskDelegate,URLSessionDelegate,URLSess
     
     
     
-
+    
 }
